@@ -1,0 +1,53 @@
+<div class="scrollable-content section overthrow" ng-controller="AddEmployee">
+  <form role="form" ng-submit="addEmployeeForm()" class="ng-pristine ng-valid ng-valid-email">
+    <fieldset>
+      <legend class="leg-form">Basic</legend>
+        <div class="form-group info-group">
+          <label class="label-info">First</label>
+          <input type="text" ng-model="first" class="form-control input-info">
+        </div>
+
+        <div class="form-group info-group">
+          <label class="label-info">Last</label>
+          <input type="text" ng-model="last" class="form-control input-info">
+        </div>
+
+        <div class="form-group info-group">
+          <label v>Gender</label>
+        </div>
+
+        <legend class="leg-form">Address</legend>
+          <div class="form-group info-group">
+            <label class="label-info">State</label>
+            <input type="text" ng-model="state" class="form-control input-info">
+          </div>
+
+          <div class="form-group info-group">
+            <label class="label-info">City</label>
+            <input type="text" ng-model="city" class="form-control input-info">
+          </div>
+
+          <div class="form-group info-group">
+            <label class="label-info">Street</label>
+            <input type="text" ng-model="street" class="form-control input-info">
+          </div>
+
+          <legend class="leg-form">Contact info</legend>
+            <div class="form-group info-group">
+              <label class="label-info">Email</label>
+              <input type="email" ng-model="email" class="form-control input-info">
+            </div>
+
+            <div class="form-group info-group">
+              <label class="label-info">Phone</label>
+              <input type="text" ng-model="phone" class="form-control input-info">
+            </div>
+
+    </fieldset>
+    <hr>
+
+    <button class="btn btn-primary btn-primary" type='submit'>
+      Add Employee
+    </button>
+  </form>
+</div>

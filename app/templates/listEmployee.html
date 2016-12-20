@@ -3,7 +3,9 @@
 
 <div class="scrollable">
     <div class="scrollable-content">
-        <!-- Add the cards here -->
+        <a ng-repeat="employee in employees | filter:filter.value" ng-click='setEmployee({{employee}})' class="list-group-item ng-binding ng-scope">
+          <img class"medium-image" src={{employee.medium}} />
+          <strong>{{employee.first}} {{employee.last}}</strong> <i class="fa fa-chevron-right pull-right rigth-arrow"></i>
+        </a>
     </div>
 </div>
-

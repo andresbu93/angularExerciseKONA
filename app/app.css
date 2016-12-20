@@ -96,3 +96,35 @@ a.item-list {
   display: block;
 }
 
+.medium-image{
+  padding-right: 50px;
+}
+
+.rigth-arrow{
+  margin-top: 35px;
+}
+
+.info-group{
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.label-info{
+  width: 100px;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.input-info{
+  width: 900px;
+  display: inline-block;
+}
+
+.radio-info{
+  display: inline-grid;
+}
+
+.leg-form{
+  color:rgba(51, 51, 51, 0.57);
+  padding-top: 20px;
+}
