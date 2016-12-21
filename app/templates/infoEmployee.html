@@ -1,15 +1,19 @@
+<div ui-content-for="title">
+  <span>Edit Employee</span>
+</div>
+
 <div class="scrollable-content section overthrow" ng-controller="InfoEmployee">
-  <form role="form" ng-submit="" class="ng-pristine ng-valid ng-valid-email">
+  <form role="form" class="ng-pristine ng-valid ng-valid-email">
     <fieldset>
       <legend class="leg-form">Basic</legend>
         <div class="form-group info-group">
           <label class="label-info">First</label>
-          <input type="text" ng-value="first" class="form-control input-info">
+          <input type="text" ng-model="first" ng-value="first" class="form-control input-info">
         </div>
 
         <div class="form-group info-group">
           <label class="label-info">Last</label>
-          <input type="text" ng-value="last" class="form-control input-info">
+          <input type="text" ng-model="last" ng-value="last" class="form-control input-info">
         </div>
 
         <div class="form-group">
@@ -21,31 +25,38 @@
         <legend class="leg-form">Address</legend>
           <div class="form-group info-group">
             <label class="label-info">State</label>
-            <input type="text" ng-value="state" class="form-control input-info">
+            <input type="text" ng-model="state" ng-value="state" class="form-control input-info">
           </div>
 
           <div class="form-group info-group">
             <label class="label-info">City</label>
-            <input type="text" ng-value="city" class="form-control input-info">
+            <input type="text" ng-model="city" ng-value="city" class="form-control input-info">
           </div>
 
           <div class="form-group info-group">
             <label class="label-info">Street</label>
-            <input type="text" ng-value="street" class="form-control input-info">
+            <input type="text" ng-model="street" ng-value="street" class="form-control input-info">
           </div>
 
           <legend class="leg-form">Contact info</legend>
             <div class="form-group info-group">
               <label class="label-info">Email</label>
-              <input type="email" ng-value="email" class="form-control input-info">
+              <input type="email" ng-model="email" ng-value="email" class="form-control input-info">
             </div>
 
             <div class="form-group info-group">
               <label class="label-info">Phone</label>
-              <input type="text" ng-value="phone" class="form-control input-info">
+              <input type="text" ng-model="phone" ng-value="phone" class="form-control input-info">
             </div>
 
     </fieldset>
     <hr>
+    <button class="btn btn-primary btn-primary" ng-click="updateEmployee()" type='submit'>
+      Save Employee
+    </button>
+    <button class="btn btn-primary btn-danger" ng-click="deleteEmployee()" type='submit'>
+      Delete Employee
+    </button>
+
   </form>
 </div>

@@ -27,27 +27,30 @@
 <body ng-app="MobileAngularUiExamples" ng-controller="MainController">
 
 <!-- Sidebars -->
-<div ng-include="'templates/sidebar.html'" class="sidebar sidebar-left" toggleable parent-active-class="sidebar-left-in" id="mainSidebar"></div>
+
+<div ng-include="'templates/sidebar.html'" class="sidebar sidebar-left" toggleable parent-active-class="sidebar-left-in"></div>
+<div ng-include="'templates/addEmployee.html'" class="sidebar sidebar-right"></div>
 <div class="app">
 
     <!-- Navbars -->
 
     <div class="navbar navbar-app navbar-absolute-top">
-        <div class="navbar-brand navbar-brand-center" yield-to="title">
-            <span>Employees</span>
+        <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
+          Employees
         </div>
 
         <div class="btn-group pull-left">
-            <div ng-click="toggle('mainSidebar')" class="btn btn-navbar sidebar-toggle">
-                <i class="fa fa-bars"></i> Menu
-            </div>
+          <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+            <i class="fa fa-bars"></i> Menu
+          </div>
         </div>
 
         <div class="btn-group pull-right" yield-to="navbarAction">
-            <div class="btn btn-navbar ng-scope" ng-hide="currentPath != '/'">
+            <div class="btn btn-navbar ng-scope" >
                <a href="#/addnew"> <i class="fa fa-user"></i> Add New </a>
             </div>
         </div>
+
 
     </div>
 

@@ -1,3 +1,7 @@
+<div ui-content-for="title">
+  <span>Add Employee</span>
+</div>
+
 <div class="scrollable-content section overthrow" ng-controller="AddEmployee">
   <form role="form" ng-submit="addEmployeeForm()" class="ng-pristine ng-valid ng-valid-email">
     <fieldset>
@@ -12,8 +16,10 @@
           <input type="text" ng-model="last" class="form-control input-info">
         </div>
 
-        <div class="form-group info-group">
-          <label v>Gender</label>
+        <div class="form-group">
+          <label class="label-info">Gender</label><br>
+          <input type="radio" ng-model="gender" value="male" >Male<br>
+	        <input type="radio" ng-model="gender" value="female" >Female
         </div>
 
         <legend class="leg-form">Address</legend>
@@ -47,7 +53,7 @@
     <hr>
 
     <button class="btn btn-primary btn-primary" type='submit'>
-      Add Employee
+      Create Employee
     </button>
   </form>
 </div>
